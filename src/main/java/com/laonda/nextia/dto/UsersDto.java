@@ -1,16 +1,18 @@
 package com.laonda.nextia.dto;
 
+import com.laonda.nextia.model.User;
+
 public class UsersDto {
-    private String name;
+    private Long id;
     private String email;
 
-    public UsersDto(String name, String email) {
-        this.name = name;
-        this.email = email;
+    public UsersDto(User user) {
+        id = user.getId();
+        email = user.getEmail();
     }
 
-    public String getName() {
-        return name;
+    public Long getId() {
+        return id;
     }
 
     public String getEmail() {
